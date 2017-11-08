@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js" id="onedrive-js" client-id="598a6f1b-4e48-4ba0-93a8-a22f7ccb6d1e"></script>
+  <script>
+    function launchOneDrivePicker() {
+      var pickerOptions = {
+        clientId: "598a6f1b-4e48-4ba0-93a8-a22f7ccb6d1e",
+        action: "share | download | query",
+        multiSelect: true,
+        openInNewWindow: true,
+        advanced: {},
+        redirect: "https://jclements11.github.io/onedrive_v70.html"
+        success: function(files) { /* success handler */ },
+        cancel: function() { /* cancel handler */ },
+        error: function(e) { /* error handler */ }
+      }
+      OneDrive.open(pickerOptions);
+    }
+  </script>
+
+  <button onclick="launchOneDrivePicker()">Open from OneDrive</button>
+</body>
+
+</html>
